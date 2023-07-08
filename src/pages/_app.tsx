@@ -3,7 +3,6 @@ import type { AppProps } from 'next/app';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 import { Reset } from 'styled-reset';
 import { Inter } from "next/font/google";
-import { LoadingProvider } from '@atoms';
 import { AppTheme, AppThemeColorDark, AppThemeColorLight } from '@theme';
 import GlobalStyle from './global.style';
 import { Layout } from '@templates';
@@ -25,12 +24,10 @@ export default function App({ Component, pageProps }: AppProps) {
       <main className={inter.className}>
         <GlobalStyle />
         <ThemeProvider theme={theme}>
-          <LoadingProvider>
-            <Layout>
-              <GlobalStyle />
-              <Component {...pageProps} />
-            </Layout>
-          </LoadingProvider>
+          <Layout>
+            <GlobalStyle />
+            <Component {...pageProps} />
+          </Layout>
         </ThemeProvider>
       </main>
     </>

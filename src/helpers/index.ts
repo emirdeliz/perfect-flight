@@ -12,3 +12,4 @@ export * from './number/NumberHelper';
 export * from './file/FileHelper';
 export * from './mail/MailHelper';
 export * from './mask/MaskHelper';
+export * from './mp3/Mp3Helper';

@@ -30,7 +30,7 @@ describe('Button component test', () => {
     const { container: buttonNode } = render(<Button outlined />);
     expect(buttonNode.firstChild).toHaveStyleRule(
       'background-color',
-      '#ffffff'
+      '#111928'
     );
     expect(buttonNode.firstChild).toHaveStyleRule(
       'border',

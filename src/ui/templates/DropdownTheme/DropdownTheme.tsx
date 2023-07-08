@@ -15,7 +15,7 @@ export const DropdownTheme = memo(({ close, onChange }: DropdownThemeProps) => {
   return (
     <Flex mt4 pr4 alignEnd>
       <S.DropdownTheme close={close}>
-        <Title white mb2 s1>Theme</Title>
+        <Title mb2>Theme</Title>
         <DropdownForm<string>
           options={themeOptions}
           value={theme}

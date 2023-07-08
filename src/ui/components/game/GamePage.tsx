@@ -6,7 +6,7 @@ import { PlayerModel } from "@api";
 import * as S from './GamePage.style';
 import * as C from "./Game.controller";
 import { initialPlayers } from "./__mocks__/players";
-import { formatNumberAsCurrency } from "@helpers";
+import { formatNumberAsCurrency, playMp3 } from "@helpers";
 import { useRouter } from "next/router";
 
 
@@ -24,6 +24,7 @@ export const GamePage = memo(() => {
       return;
     }
 
+    playMp3('/red-light-sound.mp3');
     setProcessing(true);
     const result = C.play(players);
     setPlayers(C.voteToContinue(result.remaining));
@@ -54,7 +55,7 @@ export const GamePage = memo(() => {
   useEffect(() => {
     const isToFinishGame = C.checkFinishGame(players, votesForEndGame);
     setFinishGame(isToFinishGame);
-  }, [votesForEndGame]);
+  }, [votesForEndGame, players]);
 
   return (
     <Flex.Center wFull hFull>
