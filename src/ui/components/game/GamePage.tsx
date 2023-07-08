@@ -1,13 +1,13 @@
 import { memo, useEffect, useMemo, useState } from "react";
 import { Button, Col, Flex, Row, Title } from "@atoms"
 import { Card, Logo, Soldier } from "@templates";
+import { formatNumberAsCurrency, playMp3 } from "@helpers";
+import { useRouter } from "next/router";
 import { Players, SectionTitle } from "./components";
 import { PlayerModel } from "@api";
 import * as S from './GamePage.style';
 import * as C from "./Game.controller";
 import { initialPlayers } from "./__mocks__/players";
-import { formatNumberAsCurrency, playMp3 } from "@helpers";
-import { useRouter } from "next/router";
 
 
 export const GamePage = memo(() => {
@@ -35,15 +35,15 @@ export const GamePage = memo(() => {
     setRounds(rounds + 1);
   }
 
-  const prizeFunds = useMemo(() => {
+  const prizeFunds = useMemo<number>(() => {
     return playersEliminated.length * C.INITIAL_BALANCE;
   }, [playersEliminated]);
 
-  const votesForEndGame = useMemo(() => {
+  const votesForEndGame = useMemo<number>(() => {
     return players.filter(p => !p.keepPlaying).length;
   }, [players]);
 
-  const buttonLabel = useMemo(() => {
+  const buttonLabel = useMemo<string>(() => {
     if (finishGame) { 
       return 'Finalizar Jogo';
     } else if (processing) {

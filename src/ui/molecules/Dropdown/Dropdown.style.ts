@@ -47,7 +47,7 @@ export const Menu = styled.div<MenuProps>`
   z-index: ${({ theme }) => theme.zIndex.Lg};
   border-radius: ${({ theme }) => theme.radius.Xs};
   box-shadow: ${({ theme }) => theme.shadow.Sm};
-  background-color: ${({ theme }) => theme.colors.White};
+  background-color: ${({ theme }) => theme.colors.N5};
   padding: ${({ theme }) => theme.padding.Sm};
   ${({ menuTop }) =>
     menuTop

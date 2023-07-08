@@ -13,7 +13,6 @@ const Global = createGlobalStyle`
 
   body {
     min-width: ${BODY_MIN_WIDTH};
-    background-color: ${Colors.N1};
   }
 
   * {

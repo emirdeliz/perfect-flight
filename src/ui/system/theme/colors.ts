@@ -1,16 +1,20 @@
-export enum Colors {
-  P1 = '#ED1B76',
-  P2 = '#B02E5D',
-  P3 = '#FDC3E9',
-  N1 = '#111928',
-  N2 = '#374151',
-  N3 = '#6B7280',
-  N4 = '#E5E7EB',
-  N5 = '#F9FAFB',
+export const Colors = {
+  P1:'#ED1B76',
+  P2: '#B02E5D',
+  P3: '#FDC3E9',
+  N1: '#111928',
+  N2: '#374151',
+  N3: '#6B7280',
+  N4: '#E5E7EB',
+  N5: '#F9FAFB',
 }
 
 export const AppThemeColorLight = {
   ...Colors,
+  N1: Colors.N4,
+  N2: Colors.N3,
+  N4: Colors.N1,
+  N3: Colors.N2
 };
 
 export const AppThemeColorDark = {

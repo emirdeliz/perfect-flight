@@ -12,6 +12,7 @@ export const Layout = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
+  background-color: ${({ theme }) => theme.colors.N1};
 `;
 
 export const LayoutContent = styled.div`

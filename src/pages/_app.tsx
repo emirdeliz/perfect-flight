@@ -5,16 +5,16 @@ import { Reset } from 'styled-reset';
 import { Inter } from "next/font/google";
 import { AppTheme, AppThemeColorDark, AppThemeColorLight } from '@theme';
 import GlobalStyle from './global.style';
-import { Layout } from '@templates';
+import { DropdownTheme, Layout } from '@templates';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
-  const theme = useMemo<DefaultTheme>(() => {
+  const theme = useMemo<DefaultTheme>(() => { 
     return {
       ...AppTheme,
-      color: isDarkMode ? AppThemeColorDark : AppThemeColorLight,
+      colors: isDarkMode ? AppThemeColorDark : AppThemeColorLight,
     };
   }, [isDarkMode]);
 
@@ -24,6 +24,9 @@ export default function App({ Component, pageProps }: AppProps) {
       <main className={inter.className}>
         <GlobalStyle />
         <ThemeProvider theme={theme}>
+          <DropdownTheme
+            onChange={(dark) => setIsDarkMode(dark)}
+          />
           <Layout>
             <GlobalStyle />
             <Component {...pageProps} />

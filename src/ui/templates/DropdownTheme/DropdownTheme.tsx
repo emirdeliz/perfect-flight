@@ -4,22 +4,20 @@ import { DropdownForm } from "@organisms";
 import * as S from './DropdownTheme.style';
 
 interface DropdownThemeProps { 
-  close: boolean;
   onChange: (isDark: boolean) => void; 
 }
 
 const themeOptions = ['Light', 'Dark'];
 
-export const DropdownTheme = memo(({ close, onChange }: DropdownThemeProps) => {
-  const [theme, setTheme] = useState<string>('Light');
+export const DropdownTheme = memo(({ onChange }: DropdownThemeProps) => {
+  const [theme, setTheme] = useState<string>('Dark');
   return (
-    <Flex mt4 pr4 alignEnd>
-      <S.DropdownTheme close={close}>
-        <Title mb2>Theme</Title>
+    <Flex pr4 alignEnd>
+      <S.DropdownTheme>
+        <Title mb2 n5={theme !== 'Light'}>Theme</Title>
         <DropdownForm<string>
           options={themeOptions}
           value={theme}
-          menuTop
           onDropdownChange={e => {
             const value = e!.value;
             setTheme(value);
