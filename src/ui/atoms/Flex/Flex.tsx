@@ -22,6 +22,8 @@ export interface FlexProps extends MarginProps, PaddingProps {
   wrap?: boolean;
   wFull?: boolean;
   hFull?: boolean;
+  minW?: string;
+  minH?: string;
   role?: string;
 }
 

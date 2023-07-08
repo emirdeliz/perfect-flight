@@ -70,4 +70,9 @@ export const Container = styled.div<FlexProps & { flexWrap: number }>`
 		${wFull ? 'width: 100%' : ''};
 		${hFull ? 'height: 100%' : ''};
 	`}
+
+  ${({ minH, minW }) => `
+		${minW ? `min-width: ${minW}` : ''};
+		${minH ? `min-height: ${minH}` : ''};
+	`}
 `;

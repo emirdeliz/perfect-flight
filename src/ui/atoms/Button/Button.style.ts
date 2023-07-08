@@ -43,7 +43,7 @@ export const Button = styled.button<ButtonProps>`
       return;
     }
 
-    const { bg, text, border } = getThemeColorByOptions({
+    const { bg, text } = getThemeColorByOptions({
       info,
       success,
       warn,
@@ -53,7 +53,7 @@ export const Button = styled.button<ButtonProps>`
     });
     return !outlined
       ? `border: solid 1px ${bg};background-color: ${bg};color: ${text};`
-      : `border: solid 1px ${bg};background-color: ${theme.colors.White};color: ${bg};`;
+      : `border: solid 1px ${bg};background-color: ${theme.colors.N1};color: ${bg};`;
   }}
   ${buildMargin()}
 `;

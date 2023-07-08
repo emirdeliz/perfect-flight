@@ -2,11 +2,13 @@ import { useMemo, useState } from 'react';
 import type { AppProps } from 'next/app';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 import { Reset } from 'styled-reset';
+import { Inter } from "next/font/google";
 import { LoadingProvider } from '@atoms';
 import { AppTheme, AppThemeColorDark, AppThemeColorLight } from '@theme';
 import GlobalStyle from './global.style';
-import './_app.css';
 import { Layout } from '@templates';
+
+const inter = Inter({ subsets: ['latin'] })
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
@@ -18,17 +20,19 @@ export default function App({ Component, pageProps }: AppProps) {
   }, [isDarkMode]);
 
   return (
-    <main>
+      <>
       <Reset />
-      <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <LoadingProvider>
-          <Layout>
-            <GlobalStyle />
-            <Component {...pageProps} />
-          </Layout>
-        </LoadingProvider>
-      </ThemeProvider>
+      <main className={inter.className}>
+        <GlobalStyle />
+        <ThemeProvider theme={theme}>
+          <LoadingProvider>
+            <Layout>
+              <GlobalStyle />
+              <Component {...pageProps} />
+            </Layout>
+          </LoadingProvider>
+        </ThemeProvider>
       </main>
+    </>
   );
 }

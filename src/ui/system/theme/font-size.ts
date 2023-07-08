@@ -7,7 +7,7 @@ export enum FontSize {
   Nm = '16px',
   Lg = '20px',
   XLg = '28px',
-  XXLg = '36px',
+  XXLg = '32px',
 }
 
 export interface FontSizeProps {
