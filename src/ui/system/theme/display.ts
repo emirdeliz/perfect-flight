@@ -1,11 +1,11 @@
 import { DefaultTheme } from 'styled-components';
 
 export enum Display {
-	Block = 'block',
-	InlineBlock = 'inline-block',
-	Inline = 'inline',
-	Flex = 'flex',
-	Initial = 'initial'
+  Block = 'block',
+  InlineBlock = 'inline-block',
+  Inline = 'inline',
+  Flex = 'flex',
+  Initial = 'initial',
 }
 
 export interface DisplayProps {

@@ -1,4 +1,4 @@
-export interface PlayerModel { 
+export interface PlayerModel {
   balance: number;
   name: string;
   keepPlaying?: boolean;

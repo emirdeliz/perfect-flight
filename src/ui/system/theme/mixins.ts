@@ -4,9 +4,8 @@ import { getMargin, MarginProps } from './margin';
 
 export const buildMargin = () => css<MarginProps>`
   ${(props) => {
-    const { marginLeft, marginRight, marginTop, marginBottom } = getMargin(
-      props
-    );
+    const { marginLeft, marginRight, marginTop, marginBottom } =
+      getMargin(props);
     return `
 			${marginLeft ? `margin-left: ${marginLeft};` : ''};
 			${marginRight ? `margin-right: ${marginRight};` : ''};
@@ -18,9 +17,8 @@ export const buildMargin = () => css<MarginProps>`
 
 export const buildPadding = () => css<MarginProps>`
   ${(props) => {
-    const { paddingLeft, paddingRight, paddingTop, paddingBottom } = getPadding(
-      props
-    );
+    const { paddingLeft, paddingRight, paddingTop, paddingBottom } =
+      getPadding(props);
     return `
 			${paddingLeft ? `padding-left: ${paddingLeft};` : ''};
 			${paddingRight ? `padding-right: ${paddingRight};` : ''};

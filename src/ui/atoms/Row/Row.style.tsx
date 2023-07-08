@@ -5,7 +5,7 @@ import { Col } from '../Col/Col.style';
 export const Row = styled.div`
   width: 100%;
   display: flex;
-  
+
   ${buildMargin()}
   ${buildPadding()}
 

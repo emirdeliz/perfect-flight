@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const HEADER_HEIGHT = "120px";
+const HEADER_HEIGHT = '120px';
 
 export const Content = styled.div`
   text-align: center;

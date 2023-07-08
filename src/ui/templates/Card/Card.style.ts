@@ -6,5 +6,6 @@ export const Card = styled.div<CardProps>`
   border-radius: ${({ theme }) => theme.radius.Sm};
   padding: ${({ theme }) => theme.padding.Sm} 0;
   padding-bottom: 0;
-  ${({ maxHeight }) => maxHeight ? `height: 100%; max-height: ${maxHeight}` : ''}
+  ${({ maxHeight }) =>
+    maxHeight ? `height: 100%; max-height: ${maxHeight}` : ''}
 `;

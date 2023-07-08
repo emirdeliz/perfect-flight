@@ -1,2 +1,2 @@
-import { HomePage } from "@components";
+import { HomePage } from '@components';
 export default HomePage;

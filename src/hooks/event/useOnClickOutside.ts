@@ -12,33 +12,41 @@ export const useOnClickOutside = () => {
     document.addEventListener('touchstart', listener);
   }, []);
 
-  const appendEventOutsideOnWindow = useCallback((
-    ref: RefObject<HTMLElement> | HTMLElement,
-    callback: (e: Event) => void
-  ) => {
-    if (initialized) {
-      return;
-    }
+  const appendEventOutsideOnWindow = useCallback(
+    (
+      ref: RefObject<HTMLElement> | HTMLElement,
+      callback: (e: Event) => void
+    ) => {
+      if (initialized) {
+        return;
+      }
 
-    const container = ref instanceof HTMLElement ? ref : ref?.current;
-    container && container.setAttribute(nameRef, randomRef);
+      const container = ref instanceof HTMLElement ? ref : ref?.current;
+      container && container.setAttribute(nameRef, randomRef);
 
-    const listener = (e: Event) => {
-      preventUpdateUnmounted(async () => {}, async () => {
-        const target = e.target as HTMLElement;
-        target.setAttribute(nameRef, randomRef);
-        
-        const isChildren = !!container?.querySelector(`[${nameRef}='${randomRef}']`);
-        !isChildren && callback(e);
-        target.removeAttribute(nameRef);
-      });
-    };
+      const listener = (e: Event) => {
+        preventUpdateUnmounted(
+          async () => {},
+          async () => {
+            const target = e.target as HTMLElement;
+            target.setAttribute(nameRef, randomRef);
 
-    document.addEventListener('mousedown', listener);
-    document.addEventListener('touchstart', listener);
-    setInitialized(true);
-    return () => removeEventListener(listener)
-  }, [initialized, preventUpdateUnmounted, randomRef, removeEventListener]);
+            const isChildren = !!container?.querySelector(
+              `[${nameRef}='${randomRef}']`
+            );
+            !isChildren && callback(e);
+            target.removeAttribute(nameRef);
+          }
+        );
+      };
+
+      document.addEventListener('mousedown', listener);
+      document.addEventListener('touchstart', listener);
+      setInitialized(true);
+      return () => removeEventListener(listener);
+    },
+    [initialized, preventUpdateUnmounted, randomRef, removeEventListener]
+  );
 
   return { appendEventOutsideOnWindow };
 };

@@ -1,350 +1,350 @@
-import { PlayerModel } from "@api";
-import { INITIAL_BALANCE } from "../Game.controller";
+import { PlayerModel } from '@api';
+import { INITIAL_BALANCE } from '../Game.controller';
 
 export const initialPlayers = [
   {
-    name: "Charles Wilson",
+    name: 'Charles Wilson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Brenda Williams",
+    name: 'Brenda Williams',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Mary Simmons",
+    name: 'Mary Simmons',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Kevin Harris",
+    name: 'Kevin Harris',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Brenda Williams",
+    name: 'Brenda Williams',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Brenda Williams",
+    name: 'Brenda Williams',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Mary Simmons",
+    name: 'Mary Simmons',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Kevin Harris",
+    name: 'Kevin Harris',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "William Jackson",
+    name: 'William Jackson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Brenda Williams",
+    name: 'Brenda Williams',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Mary Simmons",
+    name: 'Mary Simmons',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Charles Wilson",
+    name: 'Charles Wilson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Brenda Williams",
+    name: 'Brenda Williams',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Kevin Harris",
+    name: 'Kevin Harris',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Brenda Williams",
+    name: 'Brenda Williams',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Brenda Williams",
+    name: 'Brenda Williams',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Brenda Williams",
+    name: 'Brenda Williams',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Brenda Williams",
+    name: 'Brenda Williams',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Kevin Harris",
+    name: 'Kevin Harris',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "William Jackson",
+    name: 'William Jackson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Brenda Williams",
+    name: 'Brenda Williams',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Kevin Harris",
+    name: 'Kevin Harris',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Mary Simmons",
+    name: 'Mary Simmons',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Charles Wilson",
+    name: 'Charles Wilson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Mary Simmons",
+    name: 'Mary Simmons',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "William Jackson",
+    name: 'William Jackson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Charles Wilson",
+    name: 'Charles Wilson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "William Jackson",
+    name: 'William Jackson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "William Jackson",
+    name: 'William Jackson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Brenda Williams",
+    name: 'Brenda Williams',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Kevin Harris",
+    name: 'Kevin Harris',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "William Jackson",
+    name: 'William Jackson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Brenda Williams",
+    name: 'Brenda Williams',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Charles Wilson",
+    name: 'Charles Wilson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "William Jackson",
+    name: 'William Jackson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Charles Wilson",
+    name: 'Charles Wilson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Brenda Williams",
+    name: 'Brenda Williams',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "William Jackson",
+    name: 'William Jackson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Charles Wilson",
+    name: 'Charles Wilson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Brenda Williams",
+    name: 'Brenda Williams',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Kevin Harris",
+    name: 'Kevin Harris',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Brenda Williams",
+    name: 'Brenda Williams',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Kevin Harris",
+    name: 'Kevin Harris',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Charles Wilson",
+    name: 'Charles Wilson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Mary Simmons",
+    name: 'Mary Simmons',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Charles Wilson",
+    name: 'Charles Wilson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Mary Simmons",
+    name: 'Mary Simmons',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "William Jackson",
+    name: 'William Jackson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Brenda Williams",
+    name: 'Brenda Williams',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Brenda Williams",
+    name: 'Brenda Williams',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "William Jackson",
+    name: 'William Jackson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "William Jackson",
+    name: 'William Jackson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Kevin Harris",
+    name: 'Kevin Harris',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Mary Simmons",
+    name: 'Mary Simmons',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "William Jackson",
+    name: 'William Jackson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Mary Simmons",
+    name: 'Mary Simmons',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Brenda Williams",
+    name: 'Brenda Williams',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Mary Simmons",
+    name: 'Mary Simmons',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Brenda Williams",
+    name: 'Brenda Williams',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Kevin Harris",
+    name: 'Kevin Harris',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Mary Simmons",
+    name: 'Mary Simmons',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Brenda Williams",
+    name: 'Brenda Williams',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Charles Wilson",
+    name: 'Charles Wilson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Mary Simmons",
+    name: 'Mary Simmons',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Kevin Harris",
+    name: 'Kevin Harris',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Charles Wilson",
+    name: 'Charles Wilson',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Brenda Williams",
+    name: 'Brenda Williams',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Kevin Harris",
+    name: 'Kevin Harris',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
+    keepPlaying: true,
   },
   {
-    name: "Brenda Williams",
+    name: 'Brenda Williams',
     balance: INITIAL_BALANCE,
-    keepPlaying: true
-  }
+    keepPlaying: true,
+  },
 ] as Array<PlayerModel>;

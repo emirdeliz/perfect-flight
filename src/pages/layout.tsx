@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Layout as LayoutTemplate } from "@templates";
+import { Layout as LayoutTemplate } from '@templates';
 import { ReactNode, memo } from 'react';
 
 interface LayoutProps {
@@ -15,9 +15,7 @@ const Layout = memo(({ children }: LayoutProps) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <LayoutTemplate>
-        {children}
-      </LayoutTemplate>
+      <LayoutTemplate>{children}</LayoutTemplate>
     </>
   );
 });

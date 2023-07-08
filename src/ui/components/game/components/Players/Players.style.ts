@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-const PARTICIPANT_MAX_WIDTH = "450px";
-const PARTICIPANT_MAX_HEIGHT = "330px";
+const PARTICIPANT_MAX_WIDTH = '450px';
+const PARTICIPANT_MAX_HEIGHT = '330px';
 
 export const Players = styled.div`
   display: flex;

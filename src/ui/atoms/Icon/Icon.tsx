@@ -81,7 +81,7 @@ const getIcon = ({
   transactions,
   user,
   users,
-  trashEmpty
+  trashEmpty,
 }: IconProps) => {
   switch (true) {
     case alert:

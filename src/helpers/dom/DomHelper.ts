@@ -42,9 +42,9 @@ export const fileImageToCanvas = async (
   return canvas;
 };
 
-export const urlToFile = async(url: string, fileType: string) => {
+export const urlToFile = async (url: string, fileType: string) => {
   const response = await fetch(url, { mode: 'cors' });
   const data = await response.blob();
-  const metadata = {  type: fileType };
-  return new File([data], "test.jpg", metadata);
-}
+  const metadata = { type: fileType };
+  return new File([data], 'test.jpg', metadata);
+};

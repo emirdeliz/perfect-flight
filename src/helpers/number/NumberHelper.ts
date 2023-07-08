@@ -1,6 +1,7 @@
-
-
-export const formatNumberAsCurrency = (value?: number, ignoreCurrencySign?: boolean) => {
+export const formatNumberAsCurrency = (
+  value?: number,
+  ignoreCurrencySign?: boolean
+) => {
   const formatter = new Intl.NumberFormat('en-us', {
     style: ignoreCurrencySign ? 'decimal' : 'currency',
     currency: 'USD',
@@ -8,7 +9,8 @@ export const formatNumberAsCurrency = (value?: number, ignoreCurrencySign?: bool
     maximumFractionDigits: 2,
   });
 
-  const valueAsNumber = Number.isFinite(value) || Number.isNaN(value) ? value || 0: 0;
+  const valueAsNumber =
+    Number.isFinite(value) || Number.isNaN(value) ? value || 0 : 0;
   return formatter.format(valueAsNumber);
 };
 

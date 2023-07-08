@@ -286,8 +286,9 @@ export const Input = ({
       onChange={(e) => {
         const eventMask = { ...e };
         if ((cpf || cnpj || phone || barcode) && eventMask.target) {
-          const valueMask = currency ? e?.target.value.replace('.', '').replace(',', '')
-          : helpers.getNumbersOfString(e?.target.value);
+          const valueMask = currency
+            ? e?.target.value.replace('.', '').replace(',', '')
+            : helpers.getNumbersOfString(e?.target.value);
           eventMask.target.value = valueMask;
         }
 

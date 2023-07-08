@@ -25,12 +25,12 @@ export const normalizeValue = <T>({
   return {
     value: value,
     before: (value as DropdownOptionProps<T>)?.before,
-    label: String((keyOfLabel && value ? value[keyOfLabel]: value) || ''),
+    label: String((keyOfLabel && value ? value[keyOfLabel] : value) || ''),
   } as DropdownSelectedItemProps<T>;
 };
 
 export const getOptionsFiltered = <T>(
-	options: Array<DropdownSelectedItemProps<T>>,
+  options: Array<DropdownSelectedItemProps<T>>,
   filter?: string
 ) => {
   return options.filter((opt) => {

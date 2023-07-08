@@ -7,9 +7,5 @@ export interface RowProps extends MarginProps, PaddingProps {
 }
 
 export const Row = ({ children, ...props }: RowProps) => {
-  return (
-    <S.Row {...props}>
-      {children}
-    </S.Row>
-  );
+  return <S.Row {...props}>{children}</S.Row>;
 };

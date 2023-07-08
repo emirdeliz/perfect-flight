@@ -164,10 +164,12 @@ export const Col = styled.div<ColProps>`
         max-width: 100%;
       `;
     } else {
-      return de ? `
+      return de
+        ? `
         flex: 0 0 ${ColSizeBase[`S${de}`]}%; 
         max-width: ${ColSizeBase[`S${de}`]}%;
-      ` : '';
+      `
+        : '';
     }
   }};
   ${buildMargin()}

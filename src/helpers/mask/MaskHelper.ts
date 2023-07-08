@@ -13,7 +13,7 @@ export const maskMoney = (money: string) => {
   const moneyFormat = (money || 0).toLocaleString('pt-BR', {
     style: 'currency',
     currency: 'BRL',
-    currencySign: ''
+    currencySign: '',
   });
   return moneyFormat;
 };
@@ -89,7 +89,9 @@ export const maskBankAgency = (agency: string) => {
 };
 
 export const maskMoneyInput = (input: string) => {
-  let dollar = '0', cents = '00', v = input;
+  let dollar = '0',
+    cents = '00',
+    v = input;
   if (v.indexOf('.') !== -1) {
     var price = v.split(',');
     dollar = price[0] || '0';
@@ -99,21 +101,23 @@ export const maskMoneyInput = (input: string) => {
     if (dollar) {
       var dollarNumbers = dollar.split('');
       var dollarLength = dollarNumbers.length;
-      cents = dollarNumbers[dollarLength-1]+cents;
+      cents = dollarNumbers[dollarLength - 1] + cents;
       dollar = '';
-      for (var i = 0; i < dollarLength-1 ; i++) {
+      for (var i = 0; i < dollarLength - 1; i++) {
         dollar += dollarNumbers[i];
       }
-      if (!dollar) {dollar = '0';}
+      if (!dollar) {
+        dollar = '0';
+      }
     }
   }
   if (v.length === 1) {
-    cents = '0'+v;
+    cents = '0' + v;
   }
   if (cents.length === 3) {
     var centNumbers = cents.split('');
-    dollar = dollar === '0' ? centNumbers[0] : dollar+centNumbers[0];
-    cents = centNumbers[1]+centNumbers[2];
+    dollar = dollar === '0' ? centNumbers[0] : dollar + centNumbers[0];
+    cents = centNumbers[1] + centNumbers[2];
   }
   return `${dollar},${cents}`;
 };

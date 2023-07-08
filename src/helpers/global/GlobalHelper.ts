@@ -1,5 +1,5 @@
 export const checkIsNodeEnvironment = () => {
-	return typeof window === 'undefined';
+  return typeof window === 'undefined';
 };
 
 export const checkIsTestEnvironment = () => {

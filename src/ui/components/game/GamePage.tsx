@@ -1,25 +1,26 @@
-import { memo, useEffect, useMemo, useState } from "react";
-import { Button, Col, Flex, Row, Title } from "@atoms"
-import { Card, Logo, Soldier } from "@templates";
-import { formatNumberAsCurrency, playMp3 } from "@helpers";
-import { useRouter } from "next/router";
-import { Players, SectionTitle } from "./components";
-import { PlayerModel } from "@api";
+import { memo, useEffect, useMemo, useState } from 'react';
+import { Button, Col, Flex, Row, Title } from '@atoms';
+import { Card, Logo, Soldier } from '@templates';
+import { formatNumberAsCurrency, playMp3 } from '@helpers';
+import { useRouter } from 'next/router';
+import { Players, SectionTitle } from './components';
+import { PlayerModel } from '@api';
 import * as S from './GamePage.style';
-import * as C from "./Game.controller";
-import { initialPlayers } from "./__mocks__/players";
-
+import * as C from './Game.controller';
+import { initialPlayers } from './__mocks__/players';
 
 export const GamePage = memo(() => {
   const [players, setPlayers] = useState<Array<PlayerModel>>(initialPlayers);
-  const [playersEliminated, setPlayersEliminated] = useState<Array<PlayerModel>>([]);
+  const [playersEliminated, setPlayersEliminated] = useState<
+    Array<PlayerModel>
+  >([]);
   const [processing, setProcessing] = useState<boolean>(false);
   const [rounds, setRounds] = useState<number>(0);
   const [finishGame, setFinishGame] = useState<boolean>(false);
   const router = useRouter();
 
-  const playGame = async () => { 
-    if (finishGame) { 
+  const playGame = async () => {
+    if (finishGame) {
       router.push('home');
       return;
     }
@@ -33,18 +34,18 @@ export const GamePage = memo(() => {
     await new Promise((r) => setTimeout(r, 1000));
     setProcessing(false);
     setRounds(rounds + 1);
-  }
+  };
 
   const prizeFunds = useMemo<number>(() => {
     return playersEliminated.length * C.INITIAL_BALANCE;
   }, [playersEliminated]);
 
   const votesForEndGame = useMemo<number>(() => {
-    return players.filter(p => !p.keepPlaying).length;
+    return players.filter((p) => !p.keepPlaying).length;
   }, [players]);
 
   const buttonLabel = useMemo<string>(() => {
-    if (finishGame) { 
+    if (finishGame) {
       return 'Finalizar Jogo';
     } else if (processing) {
       return 'Eliminando participantes...';
@@ -76,23 +77,37 @@ export const GamePage = memo(() => {
             <Row>
               <Col>
                 <Card>
-                  <SectionTitle title="Round" subTitle={String(rounds < 10 ? `0${rounds}` : rounds)} />
+                  <SectionTitle
+                    title="Round"
+                    subTitle={String(rounds < 10 ? `0${rounds}` : rounds)}
+                  />
                 </Card>
               </Col>
               <Col.Auto>
                 <Card>
-                  <SectionTitle title="Fundos do Prêmio" subTitle={formatNumberAsCurrency(prizeFunds)} />
+                  <SectionTitle
+                    title="Fundos do Prêmio"
+                    subTitle={formatNumberAsCurrency(prizeFunds)}
+                  />
                 </Card>
               </Col.Auto>
             </Row>
             <Soldier type="circle" />
             <Flex.Center>
-              <Button mb5 onClick={playGame} default={processing} clickable={!processing}>
+              <Button
+                mb5
+                onClick={playGame}
+                default={processing}
+                clickable={!processing}
+              >
                 {buttonLabel}
               </Button>
             </Flex.Center>
             <Card>
-              <SectionTitle title="Votos para o fim do jogo" subTitle={votesForEndGame} />
+              <SectionTitle
+                title="Votos para o fim do jogo"
+                subTitle={votesForEndGame}
+              />
             </Card>
           </Col.Auto>
           <Col.Auto>

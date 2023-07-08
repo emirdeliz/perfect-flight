@@ -57,13 +57,13 @@ export const Dropdown = <T extends GenericObject>({
   const optionsFiltered = useMemo(() => {
     return getOptionsFiltered(
       Array.isArray(optionsNormalized) ? optionsNormalized : [],
-      filter,
+      filter
     );
   }, [filter, optionsNormalized]);
 
   const hasSelectedItem = useMemo(
     () => !!selectedItem.label,
-    [selectedItem.label],
+    [selectedItem.label]
   );
   const id = String(props.id);
 

@@ -1,2 +1,2 @@
-import { GamePage } from "@components";
+import { GamePage } from '@components';
 export default GamePage;

@@ -9,11 +9,7 @@ interface ThemeTestUtilsProps {
 }
 
 export const ThemeTestUtils = ({ children }: ThemeTestUtilsProps) => {
-  return (
-    <ThemeProvider theme={theme}>
-      {children}
-    </ThemeProvider>
-  );
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
 
 const customRender = (ui: ReactElement) => {

@@ -1,10 +1,10 @@
 export const updateArray = <T>(target: Array<T>, newData: T, index: number) => {
-	const result = [
-		...target.slice(0, index),
-		newData,
-		...target.slice(index + 1),
-	];
-	return result;
+  const result = [
+    ...target.slice(0, index),
+    newData,
+    ...target.slice(index + 1),
+  ];
+  return result;
 };
 export const updateItemInArray = <
   T,
@@ -18,14 +18,8 @@ export const updateItemInArray = <
   updateValue: T[V];
   testFailValue?: T[V];
 }) => {
-  const {
-    array,
-    testKey,
-    testValue,
-    updateKey,
-    updateValue,
-    testFailValue,
-  } = params;
+  const { array, testKey, testValue, updateKey, updateValue, testFailValue } =
+    params;
   return [...array].map((item) => {
     if (item[testKey] === testValue) {
       item[updateKey] = updateValue;
@@ -36,17 +30,22 @@ export const updateItemInArray = <
   });
 };
 
-export const sortArrayByDate = <T>(array: Array<T>, dateKey: keyof T = 'createdAt' as keyof T) => {
+export const sortArrayByDate = <T>(
+  array: Array<T>,
+  dateKey: keyof T = 'createdAt' as keyof T
+) => {
   return array.sort((a, b) => {
     const dateA = new Date(String(a[dateKey]));
     const dateB = new Date(String(a[dateKey]));
     return dateA.getTime() - dateB.getTime();
   });
-}
+};
 
-export const checkIfArrayHasNullEmptyOrUndefinedValues  = (values?: Array<String|Number|Boolean|Date|null|undefined> ) => {
+export const checkIfArrayHasNullEmptyOrUndefinedValues = (
+  values?: Array<String | Number | Boolean | Date | null | undefined>
+) => {
   if (values) {
-    return values.some(value => {
+    return values.some((value) => {
       if (value === null || value === undefined || value === '') {
         return true;
       }
@@ -54,4 +53,4 @@ export const checkIfArrayHasNullEmptyOrUndefinedValues  = (values?: Array<String
     });
   }
   return false;
-}
+};

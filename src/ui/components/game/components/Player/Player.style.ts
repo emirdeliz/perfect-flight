@@ -9,8 +9,8 @@ export const Player = styled.div`
   width: 100%;
 `;
 
-const AVATAR_HEIGHT = "32px";
-const AVATAR_WIDTH = "32px";
+const AVATAR_HEIGHT = '32px';
+const AVATAR_WIDTH = '32px';
 
 export const Avatar = styled.img`
   width: ${AVATAR_WIDTH};
