@@ -12,11 +12,8 @@ import {
   Shadow,
   ZIndex,
 } from '@theme';
-import { Loading, LoadingProvider } from '@atoms';
-import { Toast, ToastProvider } from '@molecules';
 import GlobalStyle from '../src/pages/global.style.ts';
 import '../src/assets/fontello/css/fontello.css';
-import '../src/pages/_app.css';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -46,14 +43,8 @@ export const decorators = [
         zIndex: ZIndex,
       }}
     >
-      <LoadingProvider>
-        <ToastProvider>
-          <Story />
-          <GlobalStyle />
-          <Toast />
-          <Loading.Global />
-        </ToastProvider>
-      </LoadingProvider>
+      <Story />
+      <GlobalStyle />
     </ThemeProvider>
   ),
 ];

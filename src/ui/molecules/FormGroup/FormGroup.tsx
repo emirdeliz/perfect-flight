@@ -29,7 +29,7 @@ export const FormGroup = ({
       {label && (
         <Flex.Row alignCenter justifyStart mb1>
           <Label
-            n2
+            n5
             fs1
             target={target}
             fw3={fw3}
