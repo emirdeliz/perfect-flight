@@ -7,6 +7,7 @@ import * as S from './GamePage.style';
 import * as C from "./Game.controller";
 import { initialPlayers } from "./__mocks__/players";
 import { formatNumberAsCurrency } from "@helpers";
+import { useRouter } from "next/router";
 
 
 export const GamePage = memo(() => {
@@ -15,14 +16,20 @@ export const GamePage = memo(() => {
   const [processing, setProcessing] = useState<boolean>(false);
   const [rounds, setRounds] = useState<number>(0);
   const [finishGame, setFinishGame] = useState<boolean>(false);
+  const router = useRouter();
 
   const playGame = async () => { 
+    if (finishGame) { 
+      router.push('home');
+      return;
+    }
+
     setProcessing(true);
     const result = C.play(players);
     setPlayers(C.voteToContinue(result.remaining));
     setPlayersEliminated([...playersEliminated, ...result.eliminated]);
 
-    await new Promise((r) => setTimeout(r, 3000));
+    await new Promise((r) => setTimeout(r, 1000));
     setProcessing(false);
     setRounds(rounds + 1);
   }
@@ -50,7 +57,7 @@ export const GamePage = memo(() => {
   }, [votesForEndGame]);
 
   return (
-    <Flex.Center wFull>
+    <Flex.Center wFull hFull>
       <Logo />
       <S.Content>
         <Row>

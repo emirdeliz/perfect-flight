@@ -4,7 +4,7 @@ import { getRandomInt } from "@helpers";
 export const CHANCES_TO_BEING_ELIMINATED = 42;
 export const CHANCES_TO_CONTINUE = 30;
 export const INITIAL_BALANCE = 42_0_0_0_0;
-export const PERCENTAGE_VOTES_FINISH_GAME = 30;
+export const PERCENTAGE_VOTES_FINISH_GAME = 50;
 
 export const play = (players: Array<PlayerModel>) => { 
   const playersResult = [] as Array<PlayerModel>;
@@ -57,6 +57,6 @@ export const checkKeepPlaying = () => {
 
 export const checkFinishGame = (players: Array<PlayerModel>, votesForEndGame: number) => {
   const result = (PERCENTAGE_VOTES_FINISH_GAME * players.length) / 100;
-  const finishGame = votesForEndGame >= result;
+  const finishGame = (votesForEndGame >= result && votesForEndGame > 0) || !players.length;
   return finishGame;
 }

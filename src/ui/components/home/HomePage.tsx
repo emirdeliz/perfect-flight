@@ -8,7 +8,7 @@ export const HomePage = memo(() => {
   return (
     <Flex.Center wFull hFull>
       <Logo />
-      <Button mt7 onClick={() => router.push('game')}>Iniciar</Button>
+      <Button mt5 onClick={() => router.push('game')}>Iniciar</Button>
     </Flex.Center>
   );
 });
