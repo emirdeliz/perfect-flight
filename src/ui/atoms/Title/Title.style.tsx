@@ -28,7 +28,7 @@ export const Title = styled.span<TitleProps>`
     font-weight: ${semibold ? theme.fontWeight.Semibold : 'normal'};
     cursor: ${cursorPointer ? 'pointer' : 'auto'};
     white-space: ${noWrap ? 'nowrap' : 'initial'};
-    color: ${error ? theme.colors.Red : getThemeColor(props)};
+    color: ${error ? theme.colors.P1 : getThemeColor(props)};
   `}
   ${({ center, justify }) =>
     center || justify

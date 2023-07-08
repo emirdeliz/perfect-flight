@@ -12,7 +12,7 @@ const Template: Story<TitleProps> = (args) => <Title {...args} />;
 export const TitleSimple = Template.bind({});
 TitleSimple.args = {
   children: 'Hello world!',
-  white: true,
+  n5: true,
 };
 
 export const TitleCapitalize = Template.bind({});

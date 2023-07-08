@@ -26,25 +26,25 @@ const Template: Story<IconProps> = (args) => {
 export const IconCheckGreen = Template.bind({});
 IconCheckGreen.args = {
   check: true,
-  green: true,
+  p1: true,
 };
 
 export const IconUploadRed = Template.bind({});
 IconUploadRed.args = {
   upload: true,
-  red: true,
+  p1: true,
 };
 
 export const IconCheckCircledWhite = Template.bind({});
 IconCheckCircledWhite.args = {
   check: true,
   circled: true,
-  white: true,
+  n5: true,
 };
 
 export const IconPdfDoubleCircledWhite = Template.bind({});
 IconPdfDoubleCircledWhite.args = {
   pdfDouble: true,
   circled: true,
-  white: true,
+  n5: true,
 };
